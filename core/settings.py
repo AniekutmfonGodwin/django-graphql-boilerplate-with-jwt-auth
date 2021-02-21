@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
+    'users.apps.UsersConfig',
     'graphene_django',
     'graphql_auth',
     'graphql_jwt.refresh_token.apps.RefreshTokenConfig',
@@ -159,9 +159,7 @@ GRAPHQL_JWT = {
     'JWT_LONG_RUNNING_REFRESH_TOKEN': True,
     'LOGIN_ALLOWED_FIELDS': ['email',"username"],
     'USER_NODE_EXCLUDE_FIELDS': ["password"],
-    # 'REGISTER_MUTATION_FIELDS': {
-    #      "email": "String",
-    #  },
+    
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
